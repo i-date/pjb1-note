@@ -17,6 +17,12 @@
   rowNo = Cells(Rows.Count, 1).End(xlUp).Row
   ```
 
+## 関数
+
+- IsNumeric(引数): 引数に指定した値を関数に変換できるか判定
+
+- Not演算子: オブジェクトを返すメソッドの結果の判定に使われることが多い
+
 ## 命名規則
 
 - https://excel-toshokan.com/vba-naming-rules/
