@@ -17,6 +17,19 @@
   rowNo = Cells(Rows.Count, 1).End(xlUp).Row
   ```
 
+- 任意のセル範囲を扱っているかの判定
+
+  ```vba
+  Private Sub Worksheet_Change(ByVal Target As Range)
+    Dim checkRng As Range
+    Set checkRng = Application.Intersect(Target, Range(セル範囲))
+    
+    If Not checkRng Is Nothing Then
+      '扱っていいないときの処理
+    End If
+  End Sub
+  ```
+
 ## 関数
 
 - IsNumeric(引数): 引数に指定した値を関数に変換できるか判定
