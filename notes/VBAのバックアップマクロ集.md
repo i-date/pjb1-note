@@ -117,7 +117,7 @@
 
   ```vba
   Private Sub Workbook_BeforeClose(Cancel As Boolean)
-    Call backup.save
+    Call backup.create
   End Sub
   ```
 
@@ -135,7 +135,7 @@
   '【戻り値】なし
   '【備  考】なし
   '=======================================================
-  Public Sub save()
+  Public Sub create()
 
     Dim book As Workbook, path As String
     Set book = ActiveWorkbook

@@ -10,7 +10,7 @@ Option Explicit
 'y–ß‚è’lz‚È‚µ
 'y”õ  lz‚È‚µ
 '=======================================================
-Public Sub save()
+Public Sub create()
 
   Dim book As Workbook, path As String
   Set book = ActiveWorkbook
