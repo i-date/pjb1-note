@@ -99,6 +99,7 @@
 ' 引数名    説明
 ' ------------------------------------------------------
 ' book      Workbook型
+' ------------------------------------------------------
 '
 '【戻り値】
 ' 呼び出し時の時間を付与したファイル名
@@ -137,20 +138,20 @@
   '=======================================================
   Public Sub create()
 
-    Dim book As Workbook, path As String
-    Set book = ActiveWorkbook
+    Dim book As Workbook, tmpPath As String
+    Set book = ThisWorkbook
     
     'バックアップフォルダの存在確認/作成
-    path = book.path & "\" & Split(book.Name, ".")(0) & "_backup"
-    makeFolder path
+    tmpPath = book.path & "\" & Split(book.Name, ".")(0) & "_backup"
+    makeFolder tmpPath
     
     'サブフォルダ(日付ごと)の存在確認/作成
-    path = path & "\" & Format(Date, "yyyymmdd")
-    makeFolder path
+    tmpPath = tmpPath & "\" & Format(Date, "yyyymmdd")
+    makeFolder tmpPath
     
     'バックアップの作成
-    path = path & "\" & getNameWithTimeStamp(book)
-    book.SaveCopyAs path
+    tmpPath = tmpPath & "\" & getNameWithTimeStamp(book)
+    book.SaveCopyAs tmpPath
     
   End Sub
 
@@ -158,18 +159,18 @@
   '【概  要】フォルダ作成
   '【引  数】引数名    説明
   '          ---------------------------------------------
-  '          path      String型、フォルダパス
+  '          inPath    String型、フォルダパス
   '          ---------------------------------------------
   '【戻り値】なし
   '【備  考】なし
   '=======================================================
-  Private Sub makeFolder(path As String)
+  Private Sub makeFolder(inPath As String)
     Dim fso As Object
     Set fso = CreateObject("Scripting.FileSystemObject")
     
     '対象フォルダの存在確認(ある: 処理なし、ない: 作成)
-    If Not fso.FolderExists(path) Then
-        fso.CreateFolder path
+    If Not fso.FolderExists(inPath) Then
+        fso.CreateFolder inPath
     End If
   End Sub
 

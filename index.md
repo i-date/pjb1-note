@@ -4,14 +4,17 @@
 
 notesディレクトリ内のノート一覧
 
-## ノート一覧
+## VBAノート一覧
 
-### VBA
+### ちょっとしたリファレンス
 
 - [VBAリンク集](notes/VBAリンク集.md)
 - [VBAショートカット集](notes/VBAショートカット.md)
-- [VBAのはじめの一歩](notes/VBAのはじめの一歩.md)
 - [VBAのTips](notes/VBAのTips.md)
+
+### 参考図書の基本学習まとめ
+
+- [VBAのはじめの一歩](notes/VBAのはじめの一歩.md)
 - [VBAの3種の値](notes/VBAの3種の値.md)
 - [VBAの配列・コレクション](notes/VBAの配列コレクション.md)
 - [VBAの実行とイベント](notes/VBAの実行とイベント.md)
@@ -20,9 +23,9 @@ notesディレクトリ内のノート一覧
 - [VBAのセルアクセス](notes/VBAのセルアクセス.md)
 - [VBAのデータ単純入力](notes/VBAのデータ単純入力.md)
 - [VBAのデータ処理](notes/VBAのデータ処理.md)
-- [](notes)
-- [](notes)
-- [](notes)
-- [](notes)
-- [](notes)
+- [VBAのファイル処理](notes/VBAのファイル処理.md)
+- [VBAの出力](notes/VBAの出力.md)
+- [VBAの外部データ連携](notes/VBAの外部データ連携.md)
+- [VBAとWebデータ](notes/VBAとWebデータ.md)
+- [VBAの実行速度](notes/VBAの実行速度.md)
 - [](notes)
