@@ -12,7 +12,7 @@ notesディレクトリ内のノート一覧
 - [VBAショートカット集](notes/VBAショートカット.md)
 - [VBAのTips](notes/VBAのTips.md)
 
-### 参考図書の基本学習まとめ
+### 基本学習まとめ 参考図書版
 
 - [VBAのはじめの一歩](notes/VBAのはじめの一歩.md)
 - [VBAの3種の値](notes/VBAの3種の値.md)
@@ -28,4 +28,4 @@ notesディレクトリ内のノート一覧
 - [VBAの外部データ連携](notes/VBAの外部データ連携.md)
 - [VBAとWebデータ](notes/VBAとWebデータ.md)
 - [VBAの実行速度](notes/VBAの実行速度.md)
-- [](notes)
+- [VBAの入力インターフェース](notes/VBAの入力インターフェース.md)
