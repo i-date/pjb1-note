@@ -36,10 +36,9 @@
 | 概要 | コード | 備考 |
 |:----|:--------|:-----|
 | アクティブセル領域 | `Range("B2").CurrentRegion` | 注意: 表の周りに一行一列空欄がないと、余分な範囲も取得する |
-| 次のデータ入力 | `Range("B2").End(引数).Offset(1)` |  |
-|  | `` |  |
+| 最終行の次行を指定 | `Range("B2").End(引数).Offset(1)` |  |
 
-- 次のデータ入力
+- 次行/次列を選択（データ入力する時など）
   - Endプロパティ(引数: xlDown・xlUp・xlToLeft・xlToRight)
     - 下記コード(1): 見かけ上値がなくても、数式などがあれば取得
   - 表全体の行数を数えてオフセット、Withステートメントをあわせて使用するとさらに良い
@@ -75,12 +74,15 @@
 ```vba
 '2枚目のシートのセル範囲
 '以下はダメ、2枚目のシート以外から実行できない
-Worksheets(2).Range(Range("B2"), Range("E4"))
+Worksheets(2).Range(Range("B2"), Range("E4")).Value = "VBA"
 
 '以下はOK
 With Worksheets(2)
-  Range(.Range("B2"), .Range("E4")).Value = "VBA"
+  .Range(.Range("B2"), .Range("E4")).Value = "VBA"
 End With
+
+'↑のOKをWithを使用せずに一行で記述すると下記のようになる
+Worksheets(2).Range(Worksheets(2).Range("B2"), Worksheets(2).Range("E4")).Value = "VBA"
 ```
 
 ## テーブル

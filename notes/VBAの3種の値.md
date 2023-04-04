@@ -10,7 +10,7 @@
 
 - 算術計算を行う関数
 - ワークシート関数を利用して数値を計算(WorksheetFunctionオブジェクトを使用)
-- 乱数リストの作成はRANDARRAYワークシート関数が
+- 乱数リストの作成はRANDARRAYワークシート関数が使用できる
   - `WorksheetFunction.RandArray(引数)`
 
 ## 日付・時刻
